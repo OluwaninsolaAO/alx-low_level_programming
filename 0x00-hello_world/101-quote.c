@@ -1,7 +1,7 @@
 #include<unistd.h>
 
 /**
- * main: Entry point
+ * main - Entry point
  *
  * Return: 1
  */
