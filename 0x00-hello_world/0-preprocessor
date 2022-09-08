@@ -1,2 +1,2 @@
 #!/bin/bash
-export CFILE=main.c; betty $CFILE > c
+gcc -E $CFILE
