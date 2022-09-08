@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-/*
- * This is my first c written in vi
- * Maybe my second
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
