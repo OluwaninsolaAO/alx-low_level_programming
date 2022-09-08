@@ -1,2 +1,2 @@
 #!/bin/bash
-betty $CFILE > c
+export CFILE=main.c; betty $CFILE > c
