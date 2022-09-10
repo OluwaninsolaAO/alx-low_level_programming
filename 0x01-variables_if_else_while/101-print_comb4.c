@@ -9,7 +9,7 @@
 int main(void)
 {
 	int row, col, sub;
-	
+
 	for (row = '0'; row < '9'; row++)
 	{
 		for (col = row + 1; col <= '9'; col++)
@@ -21,7 +21,7 @@ int main(void)
 					putchar(row);
 					putchar(col);
 					putchar(sub);
-					
+
 					if (row == '7' && col == '8')
 						continue;
 
@@ -32,6 +32,6 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	
+
 	return (0);
 }

@@ -9,7 +9,7 @@
 int main(void)
 {
 	int row, col;
-	
+
 	for (row = '0'; row < '9'; row++)
 	{
 		for (col = row + 1; col <= '9'; col++)
@@ -18,10 +18,10 @@ int main(void)
 			{
 				putchar(row);
 				putchar(col);
-				
+
 				if (row == '8' && col == '9')
 					continue;
-				
+
 				putchar(',');
 				putchar(' ');
 			}
