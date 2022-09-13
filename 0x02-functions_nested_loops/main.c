@@ -7,7 +7,7 @@
 int main(void)
 {
 	int r;
-	r = _abs(-9);
+	r = print_last_digit(99093);
 	_putchar(r + '0');
 	_putchar('\n');
 
