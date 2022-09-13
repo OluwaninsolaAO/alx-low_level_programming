@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower - Main Entry
+ * _isalpha - Main Entry
  * Return: 1 true 0 false
  * @c: being an automatic variable
  */
@@ -16,7 +16,7 @@ int _isalpha(int c)
 		if (c == temp)
 			retval = 1;
 	}
-	
+
 	for (temp = 'A'; temp <= 'Z'; temp++)
 	{
 		if (c == temp)
