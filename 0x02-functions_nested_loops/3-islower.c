@@ -8,15 +8,13 @@
 
 int _islower(int c)
 {
-	int retval;
+	int retval = 0;
 	int temp;
 
 	for (temp = 'a'; temp <= 'z'; temp++)
 	{
 		if (c == temp)
 			retval = 1;
-		else
-			retval = 0;
 	}
 
 	return (retval);
