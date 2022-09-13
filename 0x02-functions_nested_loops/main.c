@@ -7,8 +7,9 @@
 int main(void)
 {
 	int r;
-	r = _isalpha('h');
+	r = print_sign(0);
 	_putchar(r + '0');
+	_putchar('\n');
 
 	return (0);
 }
