@@ -6,6 +6,6 @@
 
 int main(void)
 {
-	add(56, 78);
+	print_to_98(15);
 	return (0);
 }
