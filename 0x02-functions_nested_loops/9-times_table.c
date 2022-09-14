@@ -22,8 +22,11 @@ void times_table(void)
 			{
 				_putchar(i * j + '0');
 			}
+			
+			if (j != 9)
+			_putchar(',');
 
-			if (i * j >= 10 && j != 9)
+			if (i * (j + 1) >= 10 && j != 9)
 			{
 				_putchar(' ');
 			}
@@ -33,8 +36,6 @@ void times_table(void)
 				_putchar(' ');
 			}
 
-			if (j != 9)
-			_putchar(',');
 		}
 		_putchar('\n');
 	}
