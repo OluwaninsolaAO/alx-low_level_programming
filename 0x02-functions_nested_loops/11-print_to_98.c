@@ -1,35 +1,35 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 
 /**
- * print_to_98 - just print to 98
- * Return: nothing but prints alot
- * @n: auto bots -- roll out
+ * print_to_98 - just print
+ * @n: auto var
+ * Return: void
  */
-
 void print_to_98(int n)
 {
-	int  i;
+	if (n <= 98)
+	{
+		for (; n <= 98; n++)
+		{
+			printf("%d", n);
 
-	if (n < 98)
-	{
-		for (i = n; i < 98; i++)
-			printf("%d, ", i);
-		_putchar(98 / 10 + '0');
-		_putchar(98 % 10 + '0');
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
 	}
-	else if (n > 98)
+	else
 	{
-		for (i = n; i > 98; i--)
-			printf("%d, ", i);
-		_putchar(98 / 10 + '0');
-		_putchar(98 % 10 + '0');
-	}
-	else if (n == 98)
-	{
-		_putchar(98 / 10 + '0');
-		_putchar(98 % 10 + '0');
-	}
+		for (; n >= 98; n--)
+		{
+			printf("%d", n);
 
-	_putchar('\n');
+			if (n == 98)
+				continue;
+			printf(", ");
+		}
+		printf("\n");
+	}
 }
