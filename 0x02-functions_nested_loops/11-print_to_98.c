@@ -23,7 +23,7 @@ void print_to_98(int n)
 			printf("%d, ", i);
 		printf("98");
 	}
-	else if (n = 98)
+	else if (n == 98)
 	{
 		printf("98");
 	}
