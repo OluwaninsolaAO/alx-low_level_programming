@@ -6,6 +6,6 @@
 
 int main(void)
 {
-	times_table();
+	add(56, 78);
 	return (0);
 }
