@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	printf("%d\n", _isupper('c'));
+	print_triangle(15);
 
 	return (0);
 }
