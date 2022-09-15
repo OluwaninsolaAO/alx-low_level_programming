@@ -10,9 +10,8 @@
 int main(void)
 {
 	int num;
-	int end = 100;
 
-	for (num = 1; num <= end; num++)
+	for (num = 1; num <= 100; num++)
 	{
 		if (num % 3 == 0 && num % 5 == 0)
 		{
@@ -31,7 +30,8 @@ int main(void)
 			printf("%d", num);
 		}
 
-		printf(" ");
+		if (num != 100)
+			printf(" ");
 	}
 	putchar('\n');
 	return (0);
