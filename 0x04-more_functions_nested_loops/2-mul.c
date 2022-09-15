@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include "main.h"
 /**
-  * mul - function multiply two ints
-  * @a: first int val
-  * @b: second int val
-  * Return: int
+  * mul - function multiply two numbers real quick
+  * @a: var 1
+  * @b: val 2
+  * Return: awesome number
   */
 int mul(int a, int b)
 {
