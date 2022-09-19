@@ -10,7 +10,7 @@ void puts2(char *str)
 {
 	int count, i;
 
-	while (count != '\n')
+	while (count != '\0')
 		count++;
 
 	for (i = 0; i < count; i++)
