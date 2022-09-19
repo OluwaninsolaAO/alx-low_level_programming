@@ -6,11 +6,14 @@
 int main(void)
 {
 
-	int n;
+	int a;
+	int b;
 
-	n = 402;
-	reset_to_98(&n);
-	printf("n = %d\n", n);
+	a = 98;
+	b = 42;
+
+	swap_int(&a, &b);
+	printf("a=%d, b=%d\n", a, b);
 
 	return (0);
 }
