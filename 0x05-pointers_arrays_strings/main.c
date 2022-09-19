@@ -7,8 +7,10 @@ int main(void)
 {
 	char *str;
 
-	str = "abc";
-	print_rev(str);
+	str = "My School";
+	rev_string(str);
+
+	printf("%s\n", str);
 
 	return (0);
 }
