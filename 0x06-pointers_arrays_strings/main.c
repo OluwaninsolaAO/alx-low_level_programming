@@ -11,7 +11,7 @@ int main(void)
 	char s2[] = "Wolrd!\n";
 	char *ptr;
 
-	ptr = _strcat(s1, s2);
+	ptr = _strncat(s1, s2, 3);
 
 	printf("%s", ptr);
 

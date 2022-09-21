@@ -3,20 +3,19 @@
 int count_string(char *str);
 
 /**
- * _strcat - a copy of strcat, concantinate two strings.
+ * _strncat - a copy of strcat, cat two strings using cat limit number.
  * @dest: pointer to the destination string.
  * @src: pointer to the source string.
+ * @n: limit stop.
  * Return: updated pointer to the destination string [dest].
  */
-
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int src_lenght, dest_lenght, i;
 
 	src_lenght = count_string(src);
 	dest_lenght = count_string(dest);
-
-	for (i = 0; i < src_lenght; i++)
+	for (i = 0; i < src_lenght && i < n; i++)
 		dest[i + dest_lenght] = src[i];
 	dest[src_lenght + dest_lenght + 1] = '\0';
 
@@ -28,7 +27,6 @@ char *_strcat(char *dest, char *src)
  * Return: total string lenght
  * @str: being the string to count
  */
-
 int count_string(char *str)
 {
 	int count;
@@ -36,6 +34,5 @@ int count_string(char *str)
 	count = 0;
 	while (str[count] != '\0')
 		count++;
-
 	return (count);
 }
