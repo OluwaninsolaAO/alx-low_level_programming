@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 int count_string(char *str);
 
@@ -17,7 +18,7 @@ char *_strcat(char *dest, char *src)
 	dest_lenght = count_string(dest);
 
 	for (i = 0; i < src_lenght; i++)
-		dest[i + src_lenght] = src[i];
+		dest[i + dest_lenght] = src[i];
 	dest[src_lenght + dest_lenght + 1] = '\0';
 
 	return (dest);
@@ -37,5 +38,5 @@ int count_string(char *str)
 	while (str[count] != '\0')
 		count++;
 
-	return (count - 1);
+	return (count);
 }
