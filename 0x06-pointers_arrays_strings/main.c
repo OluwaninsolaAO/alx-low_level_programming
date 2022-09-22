@@ -7,12 +7,14 @@
 
 int main(void)
 {
-	char s1[] = "Hello";
-	char s2[] = "World!";
+	int a[] = {1, 2, 3, 4, 5, 6, 7};
+	int i;
 
-	printf("%d\n", _strcmp(s1, s2));
-	printf("%d\n", _strcmp(s2, s1));
-	printf("%d\n", _strcmp(s1, s1));
+	reverse_array(a, 7);
+
+	for (i = 0; i < 7; i++)
+		printf("%d, ", a[i]);
+	printf("\n");
 
 	return (0);
 }
