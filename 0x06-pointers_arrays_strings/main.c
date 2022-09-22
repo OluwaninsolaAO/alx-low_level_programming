@@ -7,14 +7,9 @@
 
 int main(void)
 {
-	int a[] = {1, 2, 3, 4, 5, 6, 7, 8};
-	int i;
+	char str[] = "Look up!\n";
 
-	reverse_array(a, 8);
-
-	for (i = 0; i < 8; i++)
-		printf("%d, ", a[i]);
-	printf("\n");
+	printf("%s", string_toupper(str));
 
 	return (0);
 }
