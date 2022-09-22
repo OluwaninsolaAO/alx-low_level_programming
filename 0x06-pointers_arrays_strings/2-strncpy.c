@@ -11,14 +11,15 @@ int count_string(char *str);
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int dest_lenght, i;
+	int i, src_lenght = count_string(src);
 
-	dest_lenght = count_string(dest);
-	for (i = 0; i < n; i++)
+	if (n > src_lenght)
+		n = src_lenght;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
 		dest[i] = src[i];
-
-	if (n > dest_lenght)
-	dest[i + 1] = '\0';
+	for ( ; i < n; i++)
+		dest[i] = src[i];
 
 	return (dest);
 }
