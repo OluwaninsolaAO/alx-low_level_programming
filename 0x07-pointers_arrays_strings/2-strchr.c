@@ -1,5 +1,5 @@
-#include <stddef.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strchr - Search for a char in a referenced string
@@ -18,5 +18,9 @@ char *_strchr(char *s, char c)
 			return (s + i);
 		i++;
 	}
+
+	if (c == s[0])
+		return (s);
+	
 	return (NULL);
 }
