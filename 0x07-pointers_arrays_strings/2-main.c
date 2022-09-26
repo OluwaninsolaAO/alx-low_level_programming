@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	char *s = "Hooooo";
+	char *s = "Hello";
 	char *f;
 
 	f = _strchr(s, 'l');
