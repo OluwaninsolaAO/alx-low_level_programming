@@ -11,6 +11,9 @@ void simple_print(char *ref, int n)
 
 	for (i = 0; i < n; i++)
 	{
+		if (!(i % 10) && i)
+			printf("\n");
+
 		printf("0x%02x ", ref[i]);
 	}
 	printf("\n");
@@ -18,9 +21,10 @@ void simple_print(char *ref, int n)
 
 int main(void)
 {
-	char buffer[98] = {0x00};
+	char buffer[98] = {0};
+	char buffer2[98] = {1,2,3,4,5,6,7,8,9,10};
 
-	_memset(buffer, 0x01, 98);
+	_memcpy(buffer + 50, buffer2, 10);
 
 	simple_print(buffer, 98);
 
