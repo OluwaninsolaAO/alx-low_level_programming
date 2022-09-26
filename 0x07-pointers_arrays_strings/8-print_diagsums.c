@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - a function that prints the sum of the two squre matrix of integers
+ * print_diagsums - a function that prints the 
+ * sum of the two squre matrix of integers
  * @a: square matrix of integers
  * @size: size of the matrix
  * Return: Nill
