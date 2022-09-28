@@ -9,9 +9,9 @@ int main(void)
 {
 	int n;
 
-	n = factorial(-1024);
+	n = _pow_recursion(2, 16);
 	printf("%d\n", n);
-	n = factorial(5);
+	n = _pow_recursion(5, -2);
 	printf("%d\n", n);
 
 	return (0);
