@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,7 +7,10 @@
 
 int main(void)
 {
-	_print_rev_recursion("\nPuts with recursion");
+	int n;
+
+	n = _strlen_recursion("Corbin Coleman");
+	printf("%d\n", n);
 
 	return (0);
 }
