@@ -1,33 +1,30 @@
 #include "main.h"
-
-int _sqrt(int n, int i);
+int _sqrt(int prev, int root);
 
 /**
- * _sqrt_recursion - finds natural sqaure root of n
- * @n: Natural Number
- * Return: Square root.
+ * _sqrt_recursion - It returns the value of square root of n.
+ * @n: an input integer
+ * Return: The square root of n
  */
-
 int _sqrt_recursion(int n)
 {
-	return (_sqrt(n, n));
+	if (n < 0)
+		return (-1);
+
+	return (_sqrt(1, n));
 }
 
 /**
- * _sqrt - Well, I had to do it my way
- * @n: Just n
- * @j: Guess variable
- * Return: sqrt
+ * _sqrt - find square root
+ * @prev: previous value
+ * @root: square root value
+ * Return: the square root
  */
-
-int _sqrt(int n, int j)
+int _sqrt(int prev, int root)
 {
-	if (n == 0)
-		return (0);
-	if (n < 0)
+	if (prev > root)
 		return (-1);
-	while ((j * j) != n && j > -1)
-		j--;
-
-	return (j);
+	else if (prev * prev == root)
+		return (prev);
+	return (_sqrt(prev + 1, root));
 }
