@@ -8,7 +8,14 @@ int main(void)
 {
 	char *s;
 
-	s = _strdup("ALX SE");
+	s = _strdup("");
+
+	if (s == NULL)
+	{
+		printf("is NULL\n");
+		return (1);
+	}
+
 	printf("%s\n", s);
 	free(s);
 	return (0);
