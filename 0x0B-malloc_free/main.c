@@ -8,7 +8,7 @@ int main(void)
 {
 	char *s;
 
-	s = _strdup("");
+	s = str_concat("Betty ", "Holberton");
 
 	if (s == NULL)
 	{
