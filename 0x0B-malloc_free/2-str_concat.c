@@ -1,53 +1,51 @@
 #include "main.h"
 
 /**
- * size_of - count the character of a string.
- * @c: passed char.
- * Return: count.
+ * str_concat - A function that concatenates two strings
+ * @s1: An input pointer of the first string
+ * @s2: An input pointer of the second string
+ * Return: Apointer to concatened strings or NULL if it str is NULL
  */
-int size_of(char *c)
-{
-	int i = 0;
-
-	if (c == NULL)
-		return (0);
-
-	if (c[0] == '\0')
-		return (0);
-
-	while (c[i] != '\0')
-		i++;
-
-	printf("%s = %d\n", c, i);
-	return (i + 1);
-}
-
-/**
- * str_concat - Concatenate two passed strings
- * @s1: String 1
- * @s2: String 2
- * Return: pointer to the joint string.
- */
-
 char *str_concat(char *s1, char *s2)
 {
-	int size_s1 = size_of(s1);
-	int size_s2 = size_of(s2);
-	char *ptr;
-	int i, j;
+	char *new_str, *starts1, *starts2;
+	int i = 0, lens1 = 0, lens2 = 0;
 
-	ptr = malloc((size_s1 + size_s2) * sizeof(char));
-
-	if (ptr == NULL)
+	starts1 = s1;
+	starts2 = s2;
+	if (s1 == NULL)
+		s1 = "";
+	while (*s1)
+	{
+		lens1++;
+		s1++;
+	}
+	s1 = starts1;
+	if (s2 == NULL)
+		s2 = "";
+	while (*s2)
+	{
+		lens2++;
+		s2++;
+	}
+	s2 = starts2;
+	new_str = malloc(sizeof(char) * (lens1 + lens2 + 1));
+	starts1 = new_str;
+	if (new_str == NULL)
 		return (NULL);
-
-	for (i = 0; i < (size_s1 - 1); i++)
-		ptr[i] = s1[i];
-
-	for (j = 0; j < size_s2; j++)
-		ptr[i + j + 1] = s2[j];
-
-	ptr[i + j + 2] = '\0';
-
-	return (ptr);
+	for (; i < (lens1 + lens2); i++)
+	{
+		if (i < lens1)
+		{
+			new_str[i] = *s1;
+			s1++;
+		}
+		else
+		{
+			new_str[i] = *s2;
+			s2++;
+		}
+	}
+	new_str[i] = '\0';
+	return (starts1);
 }
