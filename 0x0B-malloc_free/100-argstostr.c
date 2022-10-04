@@ -6,7 +6,6 @@
  * @av: vector
  * Return: ptr to array
  */
-
 char *argstostr(int ac, char **av)
 {
 	char *s;
@@ -49,4 +48,5 @@ char *argstostr(int ac, char **av)
 
 	return (s);
 }
+
 
