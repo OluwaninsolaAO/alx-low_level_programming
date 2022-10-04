@@ -4,7 +4,7 @@
  * No comment
  */
 
-int main(int ac, **av)
+int main(int ac, char **av)
 {
 	char *s;
 
