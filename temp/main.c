@@ -4,8 +4,8 @@
  * No Comment
  */
 
- int main(void)
- {
-     printf("Awesome Time\n");
-     return (0);
- }
+int main(void)
+{
+    printf("Awesome Time\n");
+    return (0);
+}
