@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 /**
- * No Comment
+ * No comments
  */
 
 int main(void)
 {
-    printf("Awesome Time\n");
-    return (0);
+	printf("Awesome Times\n");
+	return (0);
 }
