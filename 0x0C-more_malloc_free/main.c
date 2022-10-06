@@ -6,10 +6,11 @@
 
 int main(void)
 {
-	int *i;
+	char *i;
 
-	i = malloc_checked(sizeof(int) * 10);
-	printf("%p\n", (void *)i);
+	i = string_nconcat("Best ", "School !!!", 6);
+
+	printf("%s\n", i);
 
 	return (0);
 }
