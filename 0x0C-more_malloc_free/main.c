@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 /**
@@ -40,8 +38,8 @@ int main(void)
 {
     int *a;
 
-    a = array_range(0, 10);
-    simple_print_buffer(a, 11);
+    a = array_range(0, 20);
+    simple_print_buffer(a, 21);
     free(a);
     return (0);
 }
