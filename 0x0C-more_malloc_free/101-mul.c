@@ -11,7 +11,7 @@ int main(int argc, char **argv)
 {
 	int num1, num2, result;
 
-	if (argc < 3 || argc >3)
+	if (argc < 3 || argc > 3)
 	{
 		printf("Error\n");
 		exit(98);
