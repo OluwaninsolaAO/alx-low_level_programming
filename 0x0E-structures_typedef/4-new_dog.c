@@ -10,6 +10,7 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *ptr, doggy;
+
 	ptr = &doggy;
 
 	if (name == NULL || age < 0 || owner == NULL)
