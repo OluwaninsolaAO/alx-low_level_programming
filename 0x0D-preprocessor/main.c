@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "3-function_like_macro.h"
+#include "4-sum.h"
 
 /**
  * No comments
@@ -7,6 +7,6 @@
 
 int main(void)
 {
-	printf("%d\n", ABS(98));
+	printf("%d\n", SUM(98, 2));
 	return (0);
 }
