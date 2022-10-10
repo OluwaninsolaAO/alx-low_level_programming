@@ -7,11 +7,9 @@
 
 int main(void)
 {
-	dog_t my_dog;
+	dog_t *my_dog = new_dog("Poppy", 3.5, "Bob");
 
-	init_dog(&my_dog, "Poppy", 3.5, "Bob");
-
-	print_dog(&my_dog);
+	print_dog(my_dog);
 
 	return (0);
 }
