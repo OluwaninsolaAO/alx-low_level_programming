@@ -13,8 +13,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	ptr = &doggy;
 
-	if (name == NULL || age < 0 || owner == NULL)
-		return (NULL);
+	if (name == NULL || *name == '\0')
+		exit(404);
+
+	if (age < 0 || owner == NULL || *owner == '\0')
+		exit(404);
 
 	ptr->name = name;
 	ptr->age = age;
