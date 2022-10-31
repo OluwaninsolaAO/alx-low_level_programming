@@ -20,6 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	read(fd, buf, letters);
 	buf[letters] = '\0';
+	close(fd);
 
 	return (write(1, buf, letters));
 }
