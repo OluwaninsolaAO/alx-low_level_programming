@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * add_dnodeint - A function that adds a node to the head of the list
- * @head: The double pointer to the head
- * @n: The data to add into new node
- * Return: A pointer to new element, or NULL on failure.
+ * add_dnodeint_end - A function that adds a node to the end of list.
+ * @head: The double pointer to the head.
+ * @n: The data to add to new node.
+ * Return: pointer to new element, NULL on failure.
  */
-dlistint_t *add_dnodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node = NULL, *temp = NULL;
 
@@ -17,7 +17,6 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		free(new_node);
 		return (NULL);
 	}
-
 	new_node->next = NULL;
 	new_node->prev = NULL;
 	new_node->n = n;
@@ -30,9 +29,12 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	else
 	{
 		temp = *head;
-		temp->prev = new_node;
-		*head = new_node;
-		new_node->next = temp;
+		while (temp->next)
+			temp = temp->next;
+
+		new_node->prev = temp;
+		temp->next = new_node;
+
 		return (new_node);
 	}
 	return (NULL);
