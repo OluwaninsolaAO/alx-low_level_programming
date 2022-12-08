@@ -9,13 +9,14 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t num = 0;
+	const dlistint_t *copy = h;
 
-	while (h->next != NULL)
+	while (copy->next != NULL)
 	{
-		printf("%d\n", h->n);
+		printf("%d\n", copy->n);
 		num++;
-		h = h->next;
+		copy = copy->next;
 	}
-	printf("%d\n", h->n);
+	printf("%d\n", copy->n);
 	return (num + 1);
 }
