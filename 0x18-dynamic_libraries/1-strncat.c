@@ -21,18 +21,3 @@ char *_strncat(char *dest, char *src, int n)
 
 	return (dest);
 }
-
-/**
- * count_string - Count  number of char in a string excluding '\0'
- * Return: total string lenght
- * @str: being the string to count
- */
-int count_string(char *str)
-{
-	int count;
-
-	count = 0;
-	while (str[count] != '\0')
-		count++;
-	return (count);
-}
