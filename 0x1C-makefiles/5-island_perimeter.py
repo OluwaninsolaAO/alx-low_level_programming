@@ -32,20 +32,36 @@ def island_perimeter(grid):
     accross all row in the grid.
     """
 
+    if not len(grid):  # if grid is empty
+        return
     y = len(grid)  # height starting from `0`: y_axis
     x = len(grid[0])  # width starting from `0`: x_axis
     perimeter = 0
-
     for dy in range(y):
         for dx in range(x):
             if grid[dy][dx] == 1:  # land ooo!
-                if grid[dy][dx - 1] == 0:  # check to left
-                    perimeter += 1
-                if grid[dy][dx + 1] == 0:  # check to right
-                    perimeter += 1
-                if grid[dy - 1][dx] == 0:  # check up
-                    perimeter += 1
-                if grid[dy + 1][dx] == 0:  # check down
-                    perimeter += 1
+                try:
+                    if grid[dy][dx - 1] == 0:  # check to left
+                        perimeter = perimeter + 1
+                except IndexError:
+                    perimeter = perimeter + 1
+
+                try:
+                    if grid[dy][dx + 1] == 0:  # check to right
+                        perimeter = perimeter + 1
+                except IndexError:
+                    perimeter = perimeter + 1
+
+                try:
+                    if grid[dy - 1][dx] == 0:  # check up
+                        perimeter = perimeter + 1
+                except IndexError:
+                    perimeter = perimeter + 1
+
+                try:
+                    if grid[dy + 1][dx] == 0:  # check down
+                        perimeter = perimeter + 1
+                except IndexError:
+                    perimeter = perimeter + 1
 
     return perimeter
