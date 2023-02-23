@@ -39,28 +39,13 @@ def island_perimeter(grid):
     for dy in range(y):
         for dx in range(x):
             if grid[dy][dx] == 1:  # land ooo!
-                try:
-                    if grid[dy][dx - 1] == 0:  # check to left
-                        perimeter = perimeter + 1
-                except IndexError:
+                if grid[dy][dx - 1] == 0:  # check to left
                     perimeter = perimeter + 1
-
-                try:
-                    if grid[dy][dx + 1] == 0:  # check to right
-                        perimeter = perimeter + 1
-                except IndexError:
+                if grid[dy][dx + 1] == 0:  # check to right
                     perimeter = perimeter + 1
-                
-                try:
-                    if grid[dy - 1][dx] == 0:  # check up
-                        perimeter = perimeter + 1
-                except IndexError:
+                if grid[dy - 1][dx] == 0:  # check up
                     perimeter = perimeter + 1
-
-                try:
-                    if grid[dy + 1][dx] == 0:  # check down
-                        perimeter = perimeter + 1
-                except IndexError:
+                if grid[dy + 1][dx] == 0:  # check down
                     perimeter = perimeter + 1
 
     return perimeter
