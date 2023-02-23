@@ -31,8 +31,6 @@ def island_perimeter(grid):
     Starting with the assumption that width is going to be equal
     accross all row in the grid.
     """
-    if not len(grid):  # if grid is empty
-        return
 
     y = len(grid)  # height starting from `0`: y_axis
     x = len(grid[0])  # width starting from `0`: x_axis
