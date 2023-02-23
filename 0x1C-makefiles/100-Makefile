@@ -9,7 +9,7 @@ all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) *~ $(NAME)
+	$(RM) $(wildcard *~) $(wildcard *.swp) $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
