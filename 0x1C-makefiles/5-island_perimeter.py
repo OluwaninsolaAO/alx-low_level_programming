@@ -31,18 +31,21 @@ def island_perimeter(grid):
     Starting with the assumption that width is going to be equal
     accross all row in the grid.
     """
-    rows = len(grid)
-    cols = len(grid[0])
+
+    y = len(grid)  # height starting from `0`: y_axis
+    x = len(grid[0])  # width starting from `0`: x_axis
     perimeter = 0
-    for i in range(1, rows - 1):
-        for j in range(1, cols - 1):
-            if grid[i][j] == 1:
-                if grid[i - 1][j] == 0:
+
+    for dy in range(y):
+        for dx in range(x):
+            if grid[dy][dx] == 1:  # land ooo!
+                if grid[dy][dx - 1] == 0:  # check to left
                     perimeter += 1
-                if grid[i + 1][j] == 0:
+                if grid[dy][dx + 1] == 0:  # check to right
                     perimeter += 1
-                if grid[i][j - 1] == 0:
+                if grid[dy - 1][dx] == 0:  # check up
                     perimeter += 1
-                if grid[i][j + 1] == 0:
+                if grid[dy + 1][dx] == 0:  # check down
                     perimeter += 1
+
     return perimeter
