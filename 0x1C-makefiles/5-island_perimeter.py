@@ -41,27 +41,31 @@ def island_perimeter(grid):
         for dx in range(x):
             if grid[dy][dx] == 1:  # land ooo!
                 try:
-                    if grid[dy][dx - 1] == 0:  # check to left
+                    if grid[dy][dx - 1] == 0 or dx - 1 < 0:  # check to left
                         perimeter = perimeter + 1
                 except IndexError:
                     perimeter = perimeter + 1
+                    # print("left edge case at [{}][{}]".format(dy, dx))
 
                 try:
                     if grid[dy][dx + 1] == 0:  # check to right
                         perimeter = perimeter + 1
                 except IndexError:
                     perimeter = perimeter + 1
+                    # print("right edge case at [{}][{}]".format(dy, dx))
 
                 try:
-                    if grid[dy - 1][dx] == 0:  # check up
+                    if grid[dy - 1][dx] == 0 or dy - 1 < 0:  # check up
                         perimeter = perimeter + 1
                 except IndexError:
                     perimeter = perimeter + 1
+                    # print("up edge case at [{}][{}]".format(dy, dx))
 
                 try:
                     if grid[dy + 1][dx] == 0:  # check down
                         perimeter = perimeter + 1
                 except IndexError:
                     perimeter = perimeter + 1
+                    # print("down edge case at [{}][{}]".format(dy, dx))
 
     return perimeter
